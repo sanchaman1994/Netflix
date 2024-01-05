@@ -1,14 +1,23 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import FaqContainer from "./container/faq";
+import FooterContainer from "./container/footer";
+import { JumbotronContainer } from "./container/jumbotron";
+import * as ROUTES from "./constants/routes";
 
 export default function App() {
 	return (
 		<Router>
-			<div className="App">
-				<Routes>
-					<Route path="/" element={<p> netflix page update</p>} />
-					<Route path=":id" element={<p> post page</p>} />
-				</Routes>
-			</div>
+			<Routes>
+				<Route exact path="/">
+					<>
+						<JumbotronContainer />,
+						<FaqContainer />
+						<FooterContainer />
+					</>
+				</Route>
+			</Routes>
 		</Router>
 	);
 }
