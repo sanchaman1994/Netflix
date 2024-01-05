@@ -34,7 +34,7 @@ export const Item = styled.div`
 	color: white;
 	margin: auto;
 	margin-bottom: 10px;
-	max-width: 728px;
+	max-width: 700px;
 	width: 100%;
 
 	&:first-of-type {
@@ -64,7 +64,6 @@ export const Header = styled.div`
 
 		@media (max-width: 600px) {
 			width: 16px;
-			
 		}
 	}
 
